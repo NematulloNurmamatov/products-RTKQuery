@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
 import { RootState } from "./store/Store";
 import { useGetProductsQuery } from "./services/ApiService";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const navigate = useNavigate()
 
   const { auth } = useSelector((state: RootState) => state);
   console.log(auth);
