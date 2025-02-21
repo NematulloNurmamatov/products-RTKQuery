@@ -1,14 +1,13 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // import { RootState } from "@reduxjs/toolkit/query";
 import { useGetProductsQuery } from "../services/ApiService";
-import { RootState } from "../store/Store";
+// import { RootState } from "../store/Store";
 
 function Products() {
     const navigate = useNavigate()
 
-    const { auth } = useSelector((state:RootState ) => state);
-    // console.log(auth);
+    // const { auth } = useSelector((state:RootState ) => state);
 
     const { data, isLoading } = useGetProductsQuery({});
     console.log(data);

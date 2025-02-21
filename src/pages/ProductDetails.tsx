@@ -1,7 +1,6 @@
-import React from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { RootState } from "../store/Store";
+// import { RootState } from "../store/Store";
 import { useGetProductDetailsQuery } from "../services/ApiService";
 
 export default function ProductDetails() {
@@ -13,8 +12,7 @@ export default function ProductDetails() {
     const { id } = useParams();
     console.log(id, "Product Details");
 
-    const { auth } = useSelector((state: RootState) => state)
-    console.log(auth, "jdkjdskjds");
+
 
     const { data, isLoading } = useGetProductDetailsQuery(id);
     console.log(data);
