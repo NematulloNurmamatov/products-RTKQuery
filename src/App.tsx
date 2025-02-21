@@ -1,17 +1,9 @@
-import { useSelector } from "react-redux";
-import { RootState } from "./store/Store";
-import { useGetProductsQuery } from "./services/ApiService";
 import { Outlet } from "react-router-dom";
 
 function App() {
 
-  const { auth } = useSelector((state: RootState) => state);
-  console.log(auth);
 
-  const { data, isLoading } = useGetProductsQuery({});
-  console.log(data);
 
-  if (isLoading)
     return <h1 className="text-3xl text-center mt-32 font-bold text-gray-700">Loading...</h1>;
 
 
